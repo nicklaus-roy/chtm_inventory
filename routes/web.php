@@ -13,4 +13,12 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('login');
+
+Route::post('/login', 'LoginController@store');
+
+Route::middleware('auth')
+	->group(function() {
+		Route::get('/dashboard', 'DashboardController@index');
+		Route::get('/logout', 'LoginController@logout');
+	});
