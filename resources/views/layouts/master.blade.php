@@ -45,7 +45,9 @@
 
         </header>
         <main role="main">
-            @yield('content')            
+            <div class="container" style="margin-top: 100px">
+                @yield('content')            
+            </div>
         </main>
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>

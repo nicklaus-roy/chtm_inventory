@@ -20,7 +20,7 @@ class LoginController extends Controller
     		//if not, redirect back with an error message
     		return redirect('/')->withErrors(['Invalid credentials']);
     	}
-    	return redirect('/dashboard');
+    	return redirect('/equipment');
     	//if successful, then redirect to the dashboard
     }
 

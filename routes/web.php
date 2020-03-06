@@ -19,6 +19,9 @@ Route::post('/login', 'LoginController@store');
 
 Route::middleware('auth')
 	->group(function() {
-		Route::get('/dashboard', 'DashboardController@index');
 		Route::get('/logout', 'LoginController@logout');
+
+		Route::get('/equipment', 'EquipmentController@index');
+		Route::get('/equipment/create', 'EquipmentController@create');
+		Route::post('/equipment/store', 'EquipmentController@store');
 	});
