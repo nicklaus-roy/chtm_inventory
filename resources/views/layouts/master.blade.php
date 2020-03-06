@@ -29,7 +29,7 @@
                     </ul>
                     <ul style="margin: 0!important">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" 
+                            <a class="nav-link dropdown-toggle" style="color:white" 
                                 href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
                                 {{ auth()->user()->name }}
                             </a>
