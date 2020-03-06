@@ -15,6 +15,12 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    public function getNameAttribute()
+    {
+        return $this->first_name.' '.$this->last_name;
+    }
+    
     protected $fillable = [
         'first_name', 'middle_initial', 'last_name', 'username'
     ];
