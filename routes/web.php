@@ -24,4 +24,7 @@ Route::middleware('auth')
 		Route::get('/equipment', 'EquipmentController@index');
 		Route::get('/equipment/create', 'EquipmentController@create');
 		Route::post('/equipment/store', 'EquipmentController@store');
+        Route::get('/utensils', 'UtensilsController@index');
+        Route::get('/utensils/create', 'UtensilsController@create');
+        Route::post('/utensils/store', 'UtensilsController@store');
 	});
