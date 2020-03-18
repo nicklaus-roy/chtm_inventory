@@ -14,6 +14,7 @@
 						<th>Brand</th>
 						<th>Date Bought</th>
 						<th>Category</th>
+						<th>Actions</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -23,6 +24,9 @@
 							<td>{{ $equipment->brand }}</td>
 							<td>{{ $equipment->date_bought }}</td>
 							<td>{{ $equipment->equipment_category->name }}</td>
+							<td>
+								<a href="/equipment/{{ $equipment->id }}/edit">Edit</a>
+							</td>
 						</tr>
 					@endforeach
 				</tbody>

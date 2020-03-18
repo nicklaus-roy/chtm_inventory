@@ -36,4 +36,25 @@ class EquipmentController extends Controller
     	// redirect to equipment index
     	return redirect('/equipment');
     }
+
+    public function edit(Equipment $equipment)
+    {
+        $equipment_categories = EquipmentCategory::all();
+        return view('equipment.edit', compact('equipment', 'equipment_categories'));
+    }
+
+    public function update(Equipment $equipment)
+    {
+        request()->validate([
+            'serial_number' => 'required',
+            'brand' => 'required',
+            'date_bought' => 'required',
+            'equipment_category_id' => 'required',
+        ]);
+        $equipment->update(request()->only([
+            'serial_number', 'brand', 'date_bought', 'equipment_category_id'
+        ]));
+
+        return redirect('/equipment');
+    }
 }

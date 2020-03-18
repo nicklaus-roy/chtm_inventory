@@ -27,4 +27,7 @@ Route::middleware('auth')
         Route::get('/utensils', 'UtensilsController@index');
         Route::get('/utensils/create', 'UtensilsController@create');
         Route::post('/utensils/store', 'UtensilsController@store');
+        // route model binding 
+        Route::get('/equipment/{equipment}/edit', 'EquipmentController@edit');
+        Route::post('/equipment/{equipment}/update', 'EquipmentController@update');
 	});
