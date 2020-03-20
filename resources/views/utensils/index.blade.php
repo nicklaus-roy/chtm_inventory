@@ -10,10 +10,11 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <td>Name</td>
-                        <td>Unit</td>
-                        <td>Quantity</td>
-                        <td>Category</td>
+                        <th>Name</th>
+                        <th>Unit</th>
+                        <th>Quantity</th>
+                        <th>Category</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,6 +24,9 @@
                             <td>{{ $utensil->unit }}</td>
                             <td>{{ $utensil->quantity }}</td>
                             <td>{{ $utensil->utensil_category->name }}</td>
+                            <td>
+                                <a href="/utensils/{{ $utensil->id }}/edit">Edit</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
